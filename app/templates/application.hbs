@@ -1,49 +1,55 @@
-<header class="header header-transparent header-waterfall ui-header">
-  <ul class="nav nav-list pull-left">
-    <li>
-      <a data-toggle="menu" href="#ui_menu">
-        <span class="icon icon-lg">menu</span>
-      </a>
-    </li>
-  </ul>
-  {{#link-to 'application' class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix" }}Ember Engines Show Case October 2016{{/link-to}}
-</header>
 
+{{#if githubAuth.token}}
+  <header class="header header-transparent header-waterfall ui-header">
+    <ul class="nav nav-list pull-left">
+      <li>
+        <a data-toggle="menu" href="#ui_menu">
+          <span class="icon icon-lg">menu</span>
+        </a>
+      </li>
+    </ul>
+    {{#link-to 'application' class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix" }}Ember Engines Show Case October 2016{{/link-to}}
+  </header>
 
-
-<nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
-  <div class="menu-scroll">
-    <div class="menu-content">
-        {{#link-to 'application' class="menu-logo" }}Ember Engines Show Case October 2016{{/link-to}}
-        <ul class="nav">
-        <li>{{#link-to 'presentation'}}Presentation{{/link-to}}</li>
-        <li>{{#link-to 'hello-engine'}}eccegordo/hello-engine{{/link-to}}</li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<main class="content">
-  <div class="container">
-    <section class="content-inner margin-top-no">
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-
-          <main class="content">
-            <div class="container">
-              <section class="content-inner">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12">
-                    {{outlet}}
-                  </div>
-                </div>
-              </section>
-            </div>
-          </main>
-
-        </div>
+  <nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
+    <div class="menu-scroll">
+      <div class="menu-content">
+          {{#link-to 'application' class="menu-logo" }}Ember Engines Show Case October 2016{{/link-to}}
+          <ul class="nav">
+          <li>{{#link-to 'presentation'}}Presentation{{/link-to}}</li>
+          <li>{{#link-to 'hello-engine'}}eccegordo/hello-engine{{/link-to}}</li>
+        </ul>
       </div>
-    </section>
-  </div>
-</main>
+    </div>
+  </nav>
+
+  <main class="content">
+    <div class="container">
+      <section class="content-inner margin-top-no">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+
+            <main class="content">
+              <div class="container">
+                <section class="content-inner">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                      {{outlet}}
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </main>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+{{else}}
+
+  <label>Please Enter a github personal access token?</label>
+  {{input value=tokenValue}}
+  <button {{action "updateToken" tokenValue}}>Set</button>
+
+{{/if}}

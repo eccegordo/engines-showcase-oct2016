@@ -1,7 +1,22 @@
-{{yield}}
-
-{{#if repo}}
-  {{repo}}
-{{else}}
-    Unable to find respository {{repoPath}} 
-{{/if}}
+<div class="card">
+	<div class="card-main">
+		<div class="card-header">
+			<div class="card-header-side pull-left">
+				<div class="avatar">
+					<img alt="Avatar" src="images/users/avatar-001.jpg">
+				</div>
+			</div>
+			<div class="card-inner">
+				<span class="card-heading">{{userObject.name}}</span>
+			</div>
+		</div>
+		<div class="card-inner">
+			<p>{{userObject.location}}</p>
+      {{#if repoObject}}
+			   <p><a href="{{repoObject.html_url}}">{{repoObject.html_url}}</a></p>
+      {{else}}
+          <p>Unable to find respository {{repoPath}}</p>
+      {{/if}}
+		</div>
+	</div>
+</div>
