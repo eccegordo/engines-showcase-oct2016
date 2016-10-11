@@ -8,8 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('presentation');
-  this.route('hello-engine');
   this.route('hello-inrepo-engine');
+  this.route('hello-engine');
+  this.mount('hello-routable-engine');
 });
 
 export default Router;
