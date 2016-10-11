@@ -7,6 +7,21 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import("bower_components/daemonite-material/js/base.js", { type: 'vendor' });
+  app.import("bower_components/daemonite-material/js/project.js", { type: 'vendor' });
+  app.import('bower_components/daemonite-material/css/fonts/MaterialIcons-Regular.eot', { destDir: 'assets/fonts' });
+  app.import('bower_components/daemonite-material/css/fonts/MaterialIcons-Regular.ijmap', { destDir: 'assets/fonts' });
+  app.import('bower_components/daemonite-material/css/fonts/MaterialIcons-Regular.svg', { destDir: 'assets/fonts' });
+  app.import('bower_components/daemonite-material/css/fonts/MaterialIcons-Regular.ttf', { destDir: 'assets/fonts' });
+  app.import('bower_components/daemonite-material/css/fonts/MaterialIcons-Regular.woff', { destDir: 'assets/fonts' });
+  app.import('bower_components/daemonite-material/css/fonts/MaterialIcons-Regular.woff2', { destDir: 'assets/fonts' });
+
+  // example images from material project
+  app.import('bower_components/daemonite-material/images/users/avatar-001.jpg', { destDir: '/images/users' });
+  app.import('bower_components/daemonite-material/images/samples/landscape.jpg', { destDir: '/images/samples' });
+  app.import('bower_components/daemonite-material/images//samples/portrait.jpg', { destDir: '/images/samples' });
+
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

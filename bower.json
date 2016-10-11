@@ -2,6 +2,7 @@
   "name": "engines-showcase-oct2016",
   "dependencies": {
     "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1"
+    "ember-cli-shims": "0.1.1",
+    "daemonite-material": "1.4.1"
   }
 }
