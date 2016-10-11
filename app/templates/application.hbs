@@ -17,6 +17,7 @@
         {{#link-to 'application' class="menu-logo" }}Ember Engines Show Case October 2016{{/link-to}}
         <ul class="nav">
         <li>{{#link-to 'presentation'}}Presentation{{/link-to}}</li>
+        <li>{{#link-to 'hello-engine'}}eccegordo/hello-engine{{/link-to}}</li>
       </ul>
     </div>
   </div>
@@ -28,7 +29,19 @@
     <section class="content-inner margin-top-no">
       <div class="row">
         <div class="col-lg-12 col-md-12">
-          {{outlet}}
+
+          <main class="content">
+            <div class="container">
+              <section class="content-inner">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    {{outlet}}
+                  </div>
+                </div>
+              </section>
+            </div>
+          </main>
+
         </div>
       </div>
     </section>

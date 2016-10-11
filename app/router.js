@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('presentation');
+  this.route('hello-engine');
 });
 
 export default Router;
