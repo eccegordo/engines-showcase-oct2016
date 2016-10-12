@@ -9,6 +9,20 @@ Depending of the behavior of the shared dependency it may or may not make sense 
 #### How isolated is isolated?
 Engines strive to isolate critical parts of your app such as the `application container`, and maintain clear isolation and namespacing. There can still be areas where your expectation of isolation might not be intuitively obvious.
 
+One example where this can come up is with generators that are not engine aware.
+
+Compare these two commits in a contrived example project. The first commit creates an
+`The Broccoli Plugin: [TemplateCompiler]` error.
+
+[[BROKEN] ember g route about -ir collision-engine](https://github.com/eccegordo/collision-example-host/commit/a76486c16a816fed36315c24ad06f91607ad198e)
+
+[[FIX] remove generated template about.js](https://github.com/eccegordo/collision-example-host/commit/5af331c128cbd9ad578d076dcdc2d77ff08f3c72)
+
+The fix is to remove the duplicate template inside the engine.
+`lib/collision-engine/app/templates/about.js`
+
+This file was automatically created by generator command
+
 #### Global state and behavior
 
 Somethings like CSS and other assets are truly global. You can have styles in your host app and styles in your engine. Beware of unintended side effects.
