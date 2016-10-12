@@ -7,7 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('presentation');
+  this.route('presentation', function() {
+    this.route('why');
+    this.route('how');
+    this.route('quirks');
+    this.route('more');
+    this.route('what');
+  });
   this.route('hello-inrepo-engine');
   this.route('hello-engine');
   this.mount('hello-routable-engine');

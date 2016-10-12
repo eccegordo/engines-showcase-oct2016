@@ -1,1 +1,21 @@
-Presentation
+<div class="card">
+	<div class="card-main">
+		<nav class="tab-nav margin-top-no">
+			<ul class="nav nav-justified">
+        <li>{{#link-to 'presentation.what' data-toggle="tab"}}What{{/link-to}}</li>
+        <li>{{#link-to 'presentation.why' data-toggle="tab"}}Why{{/link-to}}</li>
+        <li>{{#link-to 'presentation.how' data-toggle="tab"}}How{{/link-to}}</li>
+        <li>{{#link-to 'presentation.quirks' data-toggle="tab"}}Quirks{{/link-to}}</li>
+        <li>{{#link-to 'presentation.more' data-toggle="tab"}}More{{/link-to}}</li>
+  		</ul>
+		  <div class="tab-nav-indicator" style="left: 1px; right: 412px;"></div>
+    </nav>
+		<div class="card-inner">
+			<div class="tab-content">
+				<div class="tab-pane fade active in">
+          {{outlet}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
