@@ -41,7 +41,7 @@
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
-                                  <h3>This application requires access token to talk to api</h3>
+                                  <h3>This application requires a github personal access token to talk to github API.</h3>
                                   <div class="form-group form-group-label">
                                       <label class="floating-label" for="token">Please provide a github personal access token </label>
                                       {{input class="form-control" id="token" type="text" value=tokenValue}}
@@ -49,7 +49,9 @@
                                       <small>Need a token? <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></small>
                                   </div>
                                 </div>
-                                <div class="card-action"> <button {{action "updateToken" tokenValue}} class="btn btn-flat btn-brand">Set Token</button> </div>
+                                <div class="card-action">
+                                  <button {{action "updateToken" tokenValue}} class="btn btn-flat btn-brand">Remember Token In Local Storage</button>
+                                </div>
                             </div>
                         </div>
                       {{/if}}

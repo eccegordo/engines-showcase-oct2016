@@ -6,8 +6,13 @@ export default Ember.Controller.extend({
     actions: {
       updateToken: function(token) {
         let githubAuth = this.get('githubAuth');
-        githubAuth.set('token', token);
-      }
+        let store = this.get('store');
+        let tokenRecord = store.createRecord('github-token', {
+          id: 'primary-token',
+          token: token
+        });
+        tokenRecord.save();
+        githubAuth.set('tokenRecord', tokenRecord);
+      },
     }
-
 });
