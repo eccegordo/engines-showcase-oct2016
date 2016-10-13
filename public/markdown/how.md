@@ -56,7 +56,7 @@ export default buildRoutes(function() {
 
 Ensure htmlbars is listed as a dependency for compiling any templates.
 
-Inside `project.json` add the following.
+Inside `package.json` add the following.
 
 ```
 "dependencies": {
