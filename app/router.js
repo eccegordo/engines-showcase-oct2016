@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('hello-inrepo-engine');
   this.route('hello-engine');
   this.mount('hello-routable-engine');
+  this.mount('my-lazy-engine');
 });
 
 export default Router;

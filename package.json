@@ -20,7 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "hello-engine": "eccegordo/hello-engine",
-    "hello-routable-engine": "eccegordo/hello-routable-engine"
+    "hello-routable-engine": "eccegordo/hello-routable-engine",
+    "my-lazy-engine": "eccegordo/my-lazy-engine"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -41,7 +42,7 @@
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "^2.8.0",
-    "ember-engines": "0.3.4",
+    "ember-engines": "0.4.0-beta.3",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-localstorage-adapter": "1.0.0-rc.1",
